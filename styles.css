@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   /* ### Primary*/
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsla(333, 80%, 67%, 0.774);
+    /*### Neutral*/
+    --Dark-Grayish-Magenta: hsla(302, 10%, 53%, 0.137);
+    --Dark-Grayish-Magenta-para: hsl(302, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: top, left;
+}
+
+.card {
+    padding: 4rem 1.4rem 0;
+}
+
+.description h1 {
+    color: var( --Very-Dark-Magenta);
+    padding: 0 2rem;
+    font-size: 2rem;
+}
+
+.description p {
+    padding: 1.5rem 0;
+    color: var(--Dark-Grayish-Magenta-para);
+    font-weight: 500;
+    line-height: 1.3rem;  
+}
+
+.description ul {
+    color: var( --Very-Dark-Magenta);
+    font-weight: 600; 
+    display: flex;
+    align-items: space-around;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.description li {
+    list-style-type: none;
+    background-color: var(--Dark-Grayish-Magenta);
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-radius: 0.5rem;  
+}
+
+.feedback {
+    padding: 1rem 0 3rem;
+}
+
+.feedback h4 {
+    color: var(--White);
+   
+}
+
+.feedback span {
+    font-weight: 300;
+    color: var(--Soft-Pink);
+    letter-spacing: 0.03rem;
+}
+
+.feedback p {
+    color: var(--Light-Grayish-Magenta);
+    padding: 1rem 0 0;
+    letter-spacing: 0.03rem;  
+}
+
+.colton, .irene, .anne {
+    background-color: var(--Very-Dark-Magenta);
+    padding:1rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.colton ul, .irene ul, .anne ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.colton li, .irene li, .anne li {
+    background-color: transparent;
+    list-style-type: none;
+}
+
+.colton img, .irene img, .anne img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.description {
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media (min-width: 768px) {
+
+    body {
+        background: url("images/bg-pattern-top-desktop.svg") left top no-repeat, url("images/bg-pattern-bottom-desktop.svg") right bottom no-repeat;
+        background-size: 40%,contain;
+    }
+    .card {
+        max-width: 70%;
+        max-height: 80%;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 0; 
+        margin: auto;
+    }
+
+    .description {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+     
+    .text {
+        padding-right: 4rem;
+        text-align: left;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+        line-height: 3rem; 
+        padding: 0 4rem 0 0;
+    }
+    
+    .stars {
+        display: inline-block;
+    }
+
+    .description li {
+        padding: 0.1;
+        font-size: 0.8rem;
+    }
+
+    .description li:first-of-type {
+        margin-right: 20%;
+    }
+
+    .description li:nth-of-type(2) {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .description li:nth-of-type(3) {
+        margin-left: 20%; 
+    }
+
+    .feedback {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1rem 0;
+        font-size: 0.8rem;
+    }
+
+    .colton {
+        transform: translateY(-6%);
+    }
+
+    .anne {
+        transform: translateY(6%);
+    } 
+
+    .colton, .irene, .anne {
+        background-color: var(--Very-Dark-Magenta);
+        padding:1rem 1rem;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+    }
+
+} 
